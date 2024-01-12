@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename="style.css")}}" />
+    </head>
+
+    <body>
+
+        {% block content %}
+
+        <h1>Petition Against Advertisements In Letters Boxes</h1>
+        
+        
+            <form action="/" method="post">
+
+                <label for="family_name">Family Name :</label>
+                <input type="text" name="family_name" placeholder="Tom">
+
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" placeholder="Jeduzor">
+
+                <label for="email">Adress email</label>
+                <input type="email" name="email" placeholder="tom.jeduzor@gmail.com">
+
+                <fieldset>
+                    <legend>Do You Agree ?<legend>
+
+                        <label for="oui"></label>
+                        <input type="checkbox" name="oui" checked/>
+
+                        <label for="non"></label>
+                        <input type="checkbox" name="non" value="non" />
+
+                </fieldset>
+
+
+                <input type="submit" value="Confirm" />
+
+            </form>
+        
+        
+        {% endblock %}
+
+
+    </body>
+</html>
